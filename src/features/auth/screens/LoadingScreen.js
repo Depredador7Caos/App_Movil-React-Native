@@ -1,4 +1,4 @@
-import { View, ActivityIndicator, Text } from "react-native";
+import { StyleSheet, ActivityIndicator, Text, View } from "react-native";
 
 export default function LoadingScreen() {
     return (

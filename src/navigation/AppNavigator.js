@@ -12,18 +12,16 @@ const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
     const { user, loading } = useContext(AuthContext);
 
-    if (loading) { return <LoadingScreen /> };
+    if (loading) return <LoadingScreen />;
 
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                {
-                    user ? (
-                        <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
-                    ) : (
-                        <Stack.Screen name="Home" component={LoginScreen}></Stack.Screen>
-                    )
-                }
+                {user ? (
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                ) : (
+                    <Stack.Screen name="Login" component={LoginScreen} />
+                )}
             </Stack.Navigator>
         </NavigationContainer>
     );
