@@ -6,7 +6,6 @@ import AppNavigator from "./navigation/AppNavigator";
 // CUERPO DEL APP
 export default function App() {
     return (
-       
         <AuthProvider> {/* ALAMACEN DE DATOS USUARIO LOGEADO */}
             <AppNavigator /> {/* NAVEGAION DE APP */}
         </AuthProvider>

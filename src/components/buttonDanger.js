@@ -1,29 +1,31 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
-export default function Boton({ title, onPress }) {
+export default function ButtonDanger({ title, onPress }) {
     return (
-        <Pressable style={styles.btn} onPress={onPress}>
-            <Text style={styles.btnText}>
+
+        <Pressable style={styles.btnDanger} onPress={onPress}>
+            <Text style={styles.textDanger}>
                 {title}
             </Text>
         </Pressable>
+
     );
 }
 
 const styles = StyleSheet.create({
-    btn: {
+    btnDanger: {
         width: 200,
         height: 50,
         borderWidth: 1,
-        borderColor: "#F45e25", // <- aquí
+        borderColor: "red",
         borderRadius: 10,
-        backgroundColor: "#F45e25",
+        backgroundColor: "red",
         alignItems: "center",
         justifyContent: "center"
     },
-    btnText: {
+    textDanger: {
         color: "#fff",
         fontSize: 20,
         fontWeight: "bold"
-    },
+    }
 });

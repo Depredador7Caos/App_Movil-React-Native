@@ -69,7 +69,7 @@ export default function LoginScreen() {
                             )}
 
                             <View style={styles.contentBtn}>
-                                <Boton onPress={handleLogin} />
+                                <Boton title="Acceder" onPress={handleLogin} />
                             </View>
                         </View>
                     </View>

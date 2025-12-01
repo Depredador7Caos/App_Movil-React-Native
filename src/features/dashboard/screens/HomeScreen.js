@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
+// IMPORTACION DE COMPONENTES
+import ButtonDanger from "../../../components/buttonDanger";
 
 export default function HomeScreen() {
 
@@ -17,11 +19,16 @@ export default function HomeScreen() {
 
                 <Text style={styles.label}>Nombre:</Text>
                 <Text style={styles.value}>{user?.nombre}</Text>
+
+                <Text style={styles.label}>matricula:</Text>
+                <Text style={styles.value}>{user?.matricula}</Text>
             </View>
 
-            <Pressable style={styles.btnLogout} onPress={logout}>
+            <ButtonDanger title="Cerrar sesión" onPress={logout}/>
+
+            {/* <Pressable style={styles.btnLogout} onPress={logout}>
                 <Text style={styles.logoutText}>Cerrar sesión</Text>
-            </Pressable>
+            </Pressable> */}
 
         </View>
     );
