@@ -1,46 +1,76 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useContext } from "react";
+
+import MainNavigator from "../../../navigation/MainNavigator";
+
 import { AuthContext } from "../../../context/AuthContext";
+
 // IMPORTACION DE COMPONENTES
 import ButtonDanger from "../../../components/buttonDanger";
+import ButtonMain from "../../../components/buttonMain";
 
 export default function HomeScreen() {
 
     const { user, logout } = useContext(AuthContext);
 
+    console.log(user);
+
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.screenComplete} edges={['top', 'bottom']}>
+            {/* MENU PARTE SUPERIOR TOP */}
+            <View style={styles.mainTop}>
 
-            <Text style={styles.title}>Bienvenido 👋</Text>
+            </View>
+            
+            {/* CONTENIDO */}
+            <View style={styles.container}>
+                <Text style={styles.title}>Bienvenido 👋</Text>
 
-            <View style={styles.card}>
-                <Text style={styles.label}>Usuario:</Text>
-                <Text style={styles.value}>{user?.usuario}</Text>
+                <View style={styles.card}>
+                    <Text style={styles.label}>Usuario:</Text>
+                    <Text style={styles.valores}>{user?.usuario}</Text>
 
-                <Text style={styles.label}>Nombre:</Text>
-                <Text style={styles.value}>{user?.nombre}</Text>
+                    <Text style={styles.label}>Nombre:</Text>
+                    <Text style={styles.valores}>{user?.nombre}</Text>
 
-                <Text style={styles.label}>matricula:</Text>
-                <Text style={styles.value}>{user?.matricula}</Text>
+                    <Text style={styles.label}>matricula:</Text>
+                    <Text style={styles.valores}>{user?.matricula}</Text>
+                </View>
+
+                <ButtonDanger title="Cerrar sesión" onPress={logout}/>
             </View>
 
-            <ButtonDanger title="Cerrar sesión" onPress={logout}/>
-
-            {/* <Pressable style={styles.btnLogout} onPress={logout}>
-                <Text style={styles.logoutText}>Cerrar sesión</Text>
-            </Pressable> */}
-
-        </View>
+            {/* MENU PARTE INFERIOR BOTTOM */}
+            <View style={styles.mainBottom}>
+                    <MainNavigator />
+                
+                {/* <ButtonMain title={"home"}/> */}
+            </View>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
+    screenComplete: {
+        flex: 1,
+        backgroundColor: "#fff",
+        // alignItems: "center",
+    },
     container: {
         flex: 1,
         backgroundColor: "#fff",
         justifyContent: "center",
         alignItems: "center",
         padding: 20,
+    },
+    mainBottom: {
+        height: 70,
+        justifyContent: "center",
+        alignItems: "center",
+        borderTopWidth: 1,
+        borderColor: "#eeeeee8f",
+        backgroundColor: "#007585"
     },
     title: {
         fontSize: 28,
@@ -60,7 +90,7 @@ const styles = StyleSheet.create({
         color: "#555",
         marginTop: 10,
     },
-    value: {
+    valores: {
         fontSize: 18,
         fontWeight: "bold",
         color: "#333",

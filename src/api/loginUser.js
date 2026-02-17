@@ -1,5 +1,5 @@
-const BASE_URL = "http://172.30.10.100/api"; // Cambia esto según tu IP real
-
+const BASE_URL = "http://172.30.10.101/api"; // Cambia esto según tu IP real
+// url del espejo
 export async function loginUser(usuario, password) {
     try {
         const response = await fetch(`${BASE_URL}/login.php`, {

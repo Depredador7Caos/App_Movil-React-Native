@@ -14,7 +14,7 @@ import Boton from "../../../components/buttons";
 export default function LoginScreen() {
 
     // STATES
-    const [usuario, setUsuario] = useState("");
+    const [usuario,  setUsuario]  = useState("");
     const [password, setPassword] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
     const { login } = useContext(AuthContext);
@@ -60,6 +60,7 @@ export default function LoginScreen() {
                                 value={password}
                                 onChangeText={setPassword}
                                 placeholder="Contraseña"
+                                autoCapitalize="none"
                                 secureTextEntry
                             />
 
