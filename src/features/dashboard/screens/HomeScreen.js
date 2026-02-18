@@ -2,13 +2,10 @@ import { View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useContext } from "react";
 
-import MainNavigator from "../../../navigation/MainNavigator";
-
 import { AuthContext } from "../../../context/AuthContext";
 
 // IMPORTACION DE COMPONENTES
 import ButtonDanger from "../../../components/buttonDanger";
-import ButtonMain from "../../../components/buttonMain";
 
 export default function HomeScreen() {
 
@@ -39,13 +36,6 @@ export default function HomeScreen() {
                 </View>
 
                 <ButtonDanger title="Cerrar sesión" onPress={logout}/>
-            </View>
-
-            {/* MENU PARTE INFERIOR BOTTOM */}
-            <View style={styles.mainBottom}>
-                    <MainNavigator />
-                
-                {/* <ButtonMain title={"home"}/> */}
             </View>
         </SafeAreaView>
     );

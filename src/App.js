@@ -1,7 +1,10 @@
 // import LoginScreen from "./features/auth/screens/LoginScreen";
 import { NavigationContainer } from "@react-navigation/native";
+import RootNavigation from "./navigation/RootNavigation";
 import AuthProvider from "./context/AuthContext";
-import AppNavigator from "./navigation/AppNavigator";import { LogBox } from 'react-native';
+
+
+import { LogBox } from 'react-native';
 
 // Ignorar warning de texto suelto en librerías
 LogBox.ignoreLogs([
@@ -13,7 +16,7 @@ export default function App() {
   return (
     <AuthProvider>
       <NavigationContainer>
-        <AppNavigator />
+        <RootNavigation />
       </NavigationContainer>
     </AuthProvider>
   );
