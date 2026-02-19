@@ -2,9 +2,12 @@ import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import MainList from "../features/dashboard/screens/MainListScreen";
+// import MainList from "../features/dashboard/screens/MainListScreen";
 import HomeScreen from "../features/dashboard/screens/HomeScreen";
 import SettingsScreen from "../features/dashboard/screens/SettingsScreen";
+
+import MainStackScreen from "../features/infraestructura/MainStackScreen";
+import ConfiguracionIndice from "../features/configuracion/__index";
 // import SettingsScreen from "../features/settings/screens/SettingsScreen";
 // import ProfileScreen from "../features/profile/screens/ProfileScreen";
 
@@ -39,7 +42,7 @@ export default function MainNavigator() {
             {/* SCREEN DE MENU GENERAL  */}
             <Tab.Screen
                 name="Menu"
-                component={MainList}
+                component={MainStackScreen}
                 options={{tabBarLabel: "Menu"}}
             />
             {/* SCREEN DE CONFIGURACION O MAS DETALLES */}

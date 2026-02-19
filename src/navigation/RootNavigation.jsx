@@ -16,10 +16,10 @@ export default function RootNavigation(){
     if (loading) return <LoadingScreen />;
 
     return (
-        <Stack.Navigator screenOptions={{headeShown: false}}>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
             {
                 user ? (
-                    <Stack.Screen name="Home" component={MainNavigator} />
+                    <Stack.Screen name="Ticket móvil" component={MainNavigator} />
                 ):(
                     <Stack.Screen name="Login" component={AppNavigator} />
                 )
