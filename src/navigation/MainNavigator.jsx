@@ -47,7 +47,7 @@ export default function MainNavigator() {
             />
             {/* SCREEN DE CONFIGURACION O MAS DETALLES */}
             <Tab.Screen
-                name="Configuracion" 
+                name="Configuracion"
                 component={SettingsScreen}
                 options={{tabBarLabel: "Configuracion"}}
             />

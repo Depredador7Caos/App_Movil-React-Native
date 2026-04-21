@@ -1,4 +1,8 @@
-const BASE_URL = "http://172.30.10.101/api"; // Cambia esto según tu IP real
+/** Espejo */
+// const BASE_URL = "http://172.30.10.101/api"; // Cambia esto según tu IP real
+
+/** Produccion */
+const BASE_URL = "https://uppenjamo.edu.mx/api"; // Cambia esto según tu IP real
 // url del espejo
 export async function loginUser(usuario, password) {
     try {

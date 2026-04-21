@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+// import { Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -9,8 +9,8 @@ const SeetingsStack = createNativeStackNavigator();
 export default function SettingsScreen () {
     return (
         <SeetingsStack.Navigator>
-            <SettingsScreen.Screen 
-                name='Config'
+            <SeetingsStack.Screen 
+                name='ConfiguracionIndice'
                 component={ConfiguracionIndice}
                 options={{ title: "Configuración"}}
             />
