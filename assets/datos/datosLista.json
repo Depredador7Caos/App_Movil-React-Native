@@ -1,6 +1,11 @@
 [
-        {
+    {
         "id": "1",
+        "title": "Ver solicitudes mantenimiento infraestructura",
+        "descripcion": "Contenido de mantenimientos",
+        "screen": "GetSolicitudes"
+    }, {
+        "id": "2",
         "title": "Agregaar Solicitud mantenimiento infraestructura",
         "descripcion": "Contenido del primer elemento",
         "screen": "AddSolicitud"
