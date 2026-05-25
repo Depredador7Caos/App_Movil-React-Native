@@ -15,10 +15,7 @@ export async function getSolicitudesMantenimiento() {
 
         const data = await response.json();
 
-        return {
-            status: "Success",
-            data: data
-        }
+        return data;
 
 
     } catch (error) {
